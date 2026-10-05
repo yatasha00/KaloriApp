@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Firebase ayar dosyası (depoya girmez; Firebase konsolundan indirilir)
+google-services.json
