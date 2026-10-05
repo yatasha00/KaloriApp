@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/salad2"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KaloriApp"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="16sp"
+            android:textColor="#6C757D"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText android:id="@+id/etAd" android:layout_width="match_parent" android:layout_height="50dp" android:hint="First Name" android:background="@android:color/white" android:padding="12dp" android:layout_marginBottom="12dp"/>
+        <EditText android:id="@+id/etSoyad" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Last Name" android:background="@android:color/white" android:padding="12dp" android:layout_marginBottom="12dp"/>
+        <EditText android:id="@+id/etKullanici" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Username" android:background="@android:color/white" android:padding="12dp" android:layout_marginBottom="12dp"/>
+        <EditText android:id="@+id/etEposta" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Email Address" android:inputType="textEmailAddress" android:background="@android:color/white" android:padding="12dp" android:layout_marginBottom="12dp"/>
+        <EditText android:id="@+id/etSifre" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Password" android:inputType="textPassword" android:background="@android:color/white" android:padding="12dp" android:layout_marginBottom="12dp"/>
+        <EditText android:id="@+id/etSifreTekrar" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Confirm Password" android:inputType="textPassword" android:background="@android:color/white" android:padding="12dp" android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnKayit"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="SIGN UP"
+            android:backgroundTint="#2E7D32"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:layout_marginTop="24dp"
+            android:textColor="#6C757D"/>
+
+        <Button
+            android:id="@+id/btnGiris"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG IN"
+            android:textColor="#1976D2"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

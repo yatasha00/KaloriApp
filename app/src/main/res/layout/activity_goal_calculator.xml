@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calorie Calculator"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#212529" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn your daily calorie needs to reach your goal."
+            android:textColor="#6C757D"
+            android:layout_marginBottom="24dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GENDER" android:textSize="12sp" android:textStyle="bold" android:textColor="#6C757D" android:layout_marginBottom="8dp"/>
+        <RadioGroup android:id="@+id/rgGender" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <RadioButton android:id="@+id/rbMale" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:text="👨 Male" android:background="@drawable/bg_gender_selector" android:button="@null" android:textAlignment="center"/>
+            <RadioButton android:id="@+id/rbFemale" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:text="👩 Female" android:background="@drawable/bg_gender_selector" android:button="@null" android:textAlignment="center" android:layout_marginStart="8dp"/>
+        </RadioGroup>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AGE" android:textSize="12sp" android:textStyle="bold" android:textColor="#6C757D"/>
+                <EditText android:id="@+id/etCalcAge" android:layout_width="match_parent" android:layout_height="50dp" android:background="@android:color/white" android:inputType="number" android:padding="12dp" android:hint="Years"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HEIGHT" android:textSize="12sp" android:textStyle="bold" android:textColor="#6C757D"/>
+                <EditText android:id="@+id/etCalcHeight" android:layout_width="match_parent" android:layout_height="50dp" android:background="@android:color/white" android:inputType="number" android:padding="12dp" android:hint="cm"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="24dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CURRENT WEIGHT" android:textSize="12sp" android:textStyle="bold" android:textColor="#6C757D"/>
+                <EditText android:id="@+id/etCalcCurrentWeight" android:layout_width="match_parent" android:layout_height="50dp" android:background="@android:color/white" android:inputType="numberDecimal" android:padding="12dp" android:hint="kg"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TARGET WEIGHT" android:textSize="12sp" android:textStyle="bold" android:textColor="#6C757D"/>
+                <EditText android:id="@+id/etCalcTargetWeight" android:layout_width="match_parent" android:layout_height="50dp" android:background="@android:color/white" android:inputType="numberDecimal" android:padding="12dp" android:hint="kg"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ACTIVITY LEVEL" android:textSize="12sp" android:textStyle="bold" android:textColor="#6C757D" android:layout_marginBottom="8dp"/>
+        <Spinner android:id="@+id/spinnerActivity" android:layout_width="match_parent" android:layout_height="50dp" android:background="@android:color/white" android:layout_marginBottom="32dp"/>
+
+        <Button
+            android:id="@+id/btnCreatePlan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="CREATE MY PLAN 🔥"
+            android:backgroundTint="#2E7D32"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    tools:context=".AnaSayfa">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp">
+
+            <TextView android:id="@+id/tvHosgeldin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginTop="32dp" android:text="Hello Guest" android:textColor="#212529" android:textSize="24sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:id="@+id/tvTarih" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:text="May 15, Friday" android:textColor="#6C757D" android:textSize="14sp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tvHosgeldin" />
+
+            <com.google.android.material.card.MaterialCardView android:layout_width="48dp" android:layout_height="48dp" android:layout_marginEnd="24dp" app:cardBackgroundColor="#E8F5E9" app:cardCornerRadius="24dp" app:cardElevation="0dp" app:layout_constraintBottom_toBottomOf="@id/tvTarih" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/tvHosgeldin">
+                <TextView android:id="@+id/tvProfilHarf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="G" android:textColor="#2E7D32" android:textSize="20sp" android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardKalori" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="24dp" android:layout_marginTop="24dp" app:cardBackgroundColor="@android:color/white" app:cardCornerRadius="16dp" app:cardElevation="4dp" app:layout_constraintTop_toBottomOf="@id/tvTarih">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical" android:padding="24dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Today's Calories" android:textColor="#6C757D" android:textSize="14sp" />
+                    <TextView android:id="@+id/tvAlinanKalori" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="0" android:textColor="#212529" android:textSize="48sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/tvHedefKalori" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Goal: 2000 kcal - 2000 left" android:textColor="#6C757D" android:textSize="12sp" />
+                    <ProgressBar android:id="@+id/progressBarKalori" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginTop="16dp" android:max="2000" android:progress="0" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Carbs" android:textColor="#6C757D" android:textSize="12sp" /><TextView android:id="@+id/tvKarb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="0g" android:textColor="#212529" android:textStyle="bold" /></LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Protein" android:textColor="#6C757D" android:textSize="12sp" /><TextView android:id="@+id/tvProtein" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="0g" android:textColor="#212529" android:textStyle="bold" /></LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fat" android:textColor="#6C757D" android:textSize="12sp" /><TextView android:id="@+id/tvYag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="0g" android:textColor="#212529" android:textStyle="bold" /></LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout android:id="@+id/middleSection" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="24dp" android:layout_marginTop="16dp" android:baselineAligned="false" android:orientation="horizontal" app:layout_constraintTop_toBottomOf="@id/cardKalori">
+                <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="120dp" android:layout_marginEnd="8dp" android:layout_weight="1" app:cardBackgroundColor="#E3F2FD" app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Water Intake" android:textColor="#1976D2" android:textSize="14sp" />
+                        <TextView android:id="@+id/tvSu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="0 fl oz" android:textColor="#0D47A1" android:textSize="24sp" android:textStyle="bold" />
+                        <Button android:id="@+id/btnSuEkle" style="@style/Widget.MaterialComponents.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+8 FL OZ" android:textColor="#1976D2" android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView android:id="@+id/btnOgunEkleCard" android:layout_width="0dp" android:layout_height="120dp" android:layout_marginStart="8dp" android:layout_weight="1" app:cardBackgroundColor="#2E7D32" app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" android:textColor="@android:color/white" android:textSize="32sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Add Meal" android:textColor="@android:color/white" android:textSize="16sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <TextView android:id="@+id/tvOgunListesiBaslik" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginTop="24dp" android:text="Today's Meals" android:textColor="#212529" android:textSize="16sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/middleSection" />
+
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardOgunListesi" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="24dp" android:layout_marginTop="12dp" app:cardBackgroundColor="@android:color/white" app:cardCornerRadius="12dp" app:cardElevation="2dp" app:layout_constraintTop_toBottomOf="@id/tvOgunListesiBaslik">
+                <LinearLayout android:id="@+id/llGununOgunleri" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:elevation="16dp"
+        app:itemIconTint="#2E7D32"
+        app:itemTextColor="#2E7D32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

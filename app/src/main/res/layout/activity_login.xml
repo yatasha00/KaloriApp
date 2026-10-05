@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F8F9FA">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/salad2"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KaloriApp"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back"
+        android:textSize="16sp"
+        android:textColor="#6C757D"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText android:id="@+id/etEmailLogin" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Email Address" android:inputType="textEmailAddress" android:background="@android:color/white" android:padding="12dp" android:layout_marginBottom="16dp"/>
+    <EditText android:id="@+id/etSifreLogin" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Password" android:inputType="textPassword" android:background="@android:color/white" android:padding="12dp" android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/btnGirisYap"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="LOG IN"
+        android:backgroundTint="#2E7D32"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:layout_marginTop="32dp"
+        android:textColor="#6C757D"/>
+
+    <Button
+        android:id="@+id/btnKayitOlGit"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGN UP"
+        android:textColor="#1976D2"/>
+</LinearLayout>
